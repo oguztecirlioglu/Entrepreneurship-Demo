@@ -1,0 +1,103 @@
+.bubbly-background {
+    background-image: url(./Untitled.png);
+    background-size: cover;
+    background-repeat: repeat;
+    padding: 30px;
+    opacity: 0.95;
+}
+
+.white-bg {
+    background: white;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.grey-bg {
+    background: grey;
+    padding: 15px;
+    border-radius: 2rem;
+    opacity: 0.9;
+}
+
+.grey-bg:hover {
+    opacity: 1;
+}
+
+
+.button {
+    opacity: 0;
+    padding: 1rem;
+    top: 50%;
+    vertical-align: middle;
+    border-radius: 1rem;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    color: white;
+}
+
+.card:hover .button, .button:hover {
+    opacity: 1;
+    background-color: Red; /* Green */
+    border: none;
+    color: white;
+    vertical-align: middle;
+    text-decoration: none;
+    display: flex;
+}
+
+.logo:hover .cheaper, .cheaper:hover {
+    font-style: italic;
+}
+
+.recur-color {
+    color: #fff!important;
+    background-color: #f5756b!important;
+}
+
+.cards {
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+  }
+
+.card {
+    display: flex;
+    background-color: grey;
+    opacity: 0.80;
+    padding: 2rem;
+}
+
+.card_item {
+    vertical-align: middle;
+}
+
+.card:hover {
+    opacity: 1;
+     
+}
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 600px) {
+    .cards { grid-template-columns: repeat(2, 1fr); }
+  }
+  
+  .logo-image {
+      max-width: 2rem;
+      max-height: 2rem;
+  }
+
+  .logo {
+      display: inline;
+      vertical-align: center;
+  }
+
+  .fa-repeat {
+      font-size: 200px;
+  }

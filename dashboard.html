@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Recur</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./style.css">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large recur-color">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="./index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+    <a href="./dashboard.html" class="w3-bar-item w3-button w3-padding-large w3-white">Dashboard</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Calendar</a>
+    <a href="./analysis.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Analysis</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Settings</a>
+    <a href="./logout.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Logout</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="./index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Calendar</a>
+    <a href="./analysis.html" class="w3-bar-item w3-button w3-padding-large">Analysis</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Settings</a>
+    <a href="./logout.html" class="w3-bar-item w3-button w3-padding-large">Logout</a>
+  </div>
+</div>
+
+
+<div class="bubbly-background">
+  <!-- First Grid -->
+  <div class="w3-row-padding w3-padding-64 w3-container grey-bg">
+          <div class="w3-half w3-center">
+              <h5 class="w3-padding-top-24">Past Month</h5>
+              <h2 class="">$394.02</h2>
+          </div>
+          <div class="w3-half w3-center">
+              <h5 class="w3-padding-top-24">Upcoming</h5>
+              <h2 class="">$69.42</h2>
+          </div>
+  </div>
+
+  <!--   Second Row  -->
+  <div class="w3-row-padding w3-padding-64 w3-container ">
+      <div class="w3-content cards ">
+          <div class="card logo">
+            <div class="logo" style="float: left;"> 15 Hours </div>
+            <img class="logo-image" style="margin-left: 1.5rem;" src="/Logos/Spotify_logo.png">
+            <div class="logo" style="display: inline-flex; margin-left: 1.5rem;">Spotify</div>
+            <div class="button w3-margin-left" style="float: right;">
+              Cancel
+            </div>
+            <div class="logo" style="float: right;">£9.99 •</div>
+          </div>
+    
+          <div class="card logo">
+            <div class="logo" style="float: left;"> 18 Hours </div>
+            <img class="logo-image" style="margin-left: 1.5rem;" src="./Logos/MSFT_Logo.png">
+            <div class="" style="display: inline; margin-left: 1.5rem;">Microsoft Services</div>
+            <div class="button w3-margin-left" style="float: right;">
+              Cancel
+            </div>
+            <div class="" style="float: right;">£149.99 •</div>
+          </div>
+
+          <div class="card logo">
+            <div class="" style="float: left;"> 5 Days </div>
+            <img class="logo-image" style="margin-left: 1.5rem;" src="./Logos/amazon_logo.png">
+            <div class="" style="display: inline-flex; margin-left: 1.5rem;">Amazon Prime</div>
+            <div class="button w3-margin-left" style="float: right;">
+              Cancel
+            </div>
+            <div class="" style="float: right;">£2.49 •</div>
+          </div>
+
+          <div class="card logo">
+            <div class="" style="float: left;"> 6 Days </div>
+            <img class="logo-image" style="margin-left: 1.5rem;" src="./Logos/netflix_logo.PNG">
+            <div class="" style="display: inline-flex; margin-left: 1.5rem;">Netflix</div>
+            <div class="button w3-margin-left" style="float: right;">
+              Cancel
+            </div>
+            <div class="" style="float: right;">£12.49 •</div>
+          </div>
+
+          <div class="card logo">
+            <div class="" style="float: left;"> 15 Days </div>
+            <img class="logo-image" style="margin-left: 1.5rem;" src="./Logos/eon-logo.jpg">
+            <div class="" style="display: inline-flex; margin-left: 1.5rem;">Eon Electric</div>
+            <div class="button w3-margin-left" style="float: right;">
+              Cancel
+            </div>
+            <div class="" style="float: right;">£111.49 •</div>
+          </div>
+
+          <div class="card logo">
+            <div class="" style="float: left;"> 15 Days </div>
+            <img class="logo-image" style="margin-left: 1.5rem;" src="./Logos/steam_logo.png">
+            <div class="" style="display: inline-flex; margin-left: 1.5rem;">Steam Premium</div>
+            <div class="button w3-margin-left" style="float: right;">
+              Cancel
+            </div>
+            <div class="" style="float: right;">£11.59 •</div>
+          </div>
+
+          <div class="card logo">
+            <div class="" style="float: left;"> 16 Days </div>
+            <img class="logo-image" style="margin-left: 1.5rem;" src="./Logos/Twitch_logo.jpg">
+            <div class="" style="display: inline-flex; margin-left: 1.5rem;">Twitch TV</div>
+            <div class="button w3-margin-left" style="float: right;">
+              Cancel
+            </div>
+            <div class="" style="float: right;">£5.00 •</div>
+          </div>
+
+          <div class="card logo">
+            <div class="" style="float: left;"> 18 Days </div>
+            <img class="logo-image" style="margin-left: 1.5rem;" src="./Logos/gym_logo.jpg">
+            <div class="" style="display: inline-flex; margin-left: 1.5rem;">Puregym</div>
+            <div class="button w3-margin-left" style="float: right;">
+              Cancel
+            </div>
+            <div class="" style="float: right;">£45.99 •</div>
+          </div>
+
+          <div class="card logo">
+            <div class="" style="float: left;"> 25 Days </div>
+            <img class="logo-image w3-margin-left" src="./Logos/hello_fresh_logo.png">
+            <div class="" style="display: inline; margin-left: 1.5rem;">Hello Fresh Foodbox</div>
+            <div class="button w3-margin-left" style="float: right;">
+              Cancel
+            </div>
+            <div class="" style="float: right;">£44.99 •</div>
+          </div>
+
+        </div>
+      </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+ </div>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
