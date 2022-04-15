@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./style.css">
+<script src="/node_modules/chart.js/dist/chart.js"></script>
 
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
@@ -58,15 +59,29 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
             <img class="logo-image w3-margin" src="/Logos/soundcloud_logo.png">
             <div class="logo w3-margin-right">Service: Soundcloud. Cost: £6.99 </div>
             <div class="button w3-margin-left" style="float: right; background-color: #6bcef5 !important;">
-              Switch
-            </div>
-          </div>
+              Switch </div>
         </div>
+        <div class="card logo">
+          <img class="logo-image" style="margin-left: 1.5rem;" src="/Logos/eon-logo.jpg">
+          <div class="logo" style="display: inline-flex; margin-left: 1.5rem;">Eon Electric</div>
+          <div class="logo w3-margin-right"> £111.49 </div>
+          <div class="logo w3-margin cheaper"> Cheaper Alternative Found! </div>
+          <i class="fa fa-arrow-right logo w3-margin" aria-hidden="true"></i>
+          <img class="logo-image w3-margin" src="/Logos/octopus_logo.png">
+          <div class="logo w3-margin-right">Service: Octopus. Cost: £104.99 </div>
+          <div class="button w3-margin-left" style="float: right; background-color: #6bcef5 !important;">
+            Switch </div>
       </div>
+    </div>
   </div>
-</div>
 
-<!-- Footer -->
+  <div class="w3-row-padding w3-padding-64 w3-container grey-bg">
+    <div class="w3-center w3-xxxlarge white-bg">Recent Spending Analysis</div>
+  </div>
+
+  <canvas class="w3-center canvas-stuff" id="myChart" style="width:100%;max-width:50%"></canvas>
+
+  <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity">  
   <div class="w3-xlarge w3-padding-32">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -89,6 +104,35 @@ function myFunction() {
   }
 }
 </script>
-
+<script>
+    var xValues = ["January", "February", "March", "April", "May"];
+    var yValues = [412.2, 420.6, 420.4 , 398.4, 394.0];
+    
+    new Chart("myChart", {
+      type: "line",
+      data: {
+        labels: xValues,
+        datasets: [{
+          fill: false,
+          lineTension: .3,
+          backgroundColor: "rgba(0,0,255,1.0)",
+          borderColor: "rgba(0,0,255,0.1)",
+          data: yValues
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{ticks: {min: 6, max:16}}],
+        },
+        plugins: {
+            legend: {display: false},
+            title: {
+            display: true,
+            text: 'Monthly Spending Analysis',
+            }
+        }
+      }
+    });
+</script>
 </body>
 </html>

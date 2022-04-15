@@ -15,6 +15,12 @@
     justify-content: center;
 }
 
+
+.canvas-stuff {
+    display: block;
+}
+
+
 .grey-bg {
     background: grey;
     padding: 15px;
