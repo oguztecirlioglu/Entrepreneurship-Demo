@@ -117,6 +117,12 @@ function myFunction() {
           fill: false,
           lineTension: .3,
           backgroundColor: "rgba(245,117,107, 0.7)",
+          elements: {
+          point: {
+            // radius: 0,
+            hitRadius: 50
+            }
+          },
           borderColor: "rgba(0,0,0,0.5)",
           data: yValues,
         }]
