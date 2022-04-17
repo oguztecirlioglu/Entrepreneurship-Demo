@@ -84,6 +84,7 @@
     background-color: grey;
     opacity: 0.80;
     padding: 2rem;
+    border-radius: 1rem;
 }
 
 .card_item {
