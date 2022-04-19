@@ -49,8 +49,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
   <!-- Alternatives To Current Subs  -->
   <div class="w3-row-padding w3-padding-64 w3-container ">
-      <div class="w3-content cards">
-          <div class="card logo grey-bg">
+      <div class="w3-content cards" >
+          <div class="card logo grey-bg" id = switch_card>
             <img class="logo-image" style="margin-left: 1.5rem;" src="/Logos/Spotify_logo.png">
             <div class="logo" style="display: inline-flex; margin-left: 1.5rem;">Spotify</div>
             <div class="logo w3-margin-right"> £9.99 </div>
@@ -187,7 +187,7 @@ function myFunction() {
   const switchNow = document.getElementById('switchNow');
   const close = document.getElementById('close');
   const modal_container_2 = document.getElementById('modal_container_2');
- 
+  const switch_card = document.getElementById('switch_card')
 
   open.addEventListener('click', () => {modal_container.classList.add('show');
   });
@@ -197,6 +197,7 @@ function myFunction() {
 
   switchNow.addEventListener('click', () => {modal_container.classList.remove('show');
   modal_container_2.classList.add('show');
+  switch_card.remove()
   
 
   });
