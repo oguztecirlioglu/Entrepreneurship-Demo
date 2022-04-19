@@ -50,7 +50,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
           </div>
           <div class="w3-half w3-center">
               <h5 class="w3-padding-top-24">Upcoming</h5>
-              <h2 class="">£69.42</h2>
+              <h2 class="" id = upcomingText>£69.42</h2>
           </div>
   </div>
 
@@ -87,12 +87,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
             <div class="" style="float: right;">£2.49 •</div>
           </div>
 
-          <div class="card logo">
+          <div class="card logo" id = netflixCard>
             <div class="" style="float: left;"> 6 Days </div>
             <img class="logo-image" style="margin-left: 1.5rem;" src="./Logos/netflix_logo.PNG">
             <div class="" style="display: inline-flex; margin-left: 1.5rem;">Netflix</div>
-            <div class="button w3-margin-left" style="float: right;">
+            <div class="button w3-margin-left" style="float: right;" id = "open">
               Cancel
+
             </div>
             <div class="" style="float: right;">£12.49 •</div>
           </div>
@@ -147,6 +148,33 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
             <div class="" style="float: right;">£44.99 •</div>
           </div>
 
+       
+
+          <div class="modal-container" id="modal_container">
+            <div class = "modal">
+              <h1>Subscription Cancelled!</h1>
+
+              <p>Netflix Subscription successfully cancelled, You will still have access to the service until 25/04/22</p>
+
+              <button id = "close" class = "close">
+                Close
+              </button>
+            </div>
+          </div>
+           
+
+           <div class="modal-container" id="modal_container_approved">
+            <div class = "modal">
+              <h1>OBIE Access Approved!</h1>
+
+              <p>You can manage your discovered subscriptions in the dashboard Tab</p>
+
+              <button id = "close2" class = "close">
+                Close
+              </button>
+            </div>
+          </div>
+
         </div>
       </div>
   </div>
@@ -173,6 +201,37 @@ function myFunction() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+</script>
+
+<script>
+
+  
+  const open = document.getElementById('open');
+  const modal_container = document.getElementById('modal_container');
+  const modal_container_approved = document.getElementById('modal_container_approved');
+  const close = document.getElementById('close');
+  const close2 = document.getElementById('close2');
+
+  const netflixCard = document.getElementById('netflixCard');
+  const upcomingText = document.getElementById('upcomingText')
+
+
+  modal_container_approved.classList.add('show');
+
+  open.addEventListener('click', () => {modal_container.classList.add('show');
+  });
+
+  close.addEventListener('click', () => {modal_container.classList.remove('show');
+  netflixCard.remove();
+  upcomingText.textContent = "£56.93";
+  });
+
+  close2.addEventListener('click', () => {modal_container_approved.classList.remove('show');
+  
+  });
+
+  
+  
 </script>
 
 </body>

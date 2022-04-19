@@ -58,7 +58,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
             <i class="fa fa-arrow-right logo w3-margin" aria-hidden="true"></i>
             <img class="logo-image w3-margin" src="/Logos/soundcloud_logo.png">
             <div class="logo w3-margin-right">Service: Soundcloud. Cost: £6.99 </div>
-            <div class="button w3-margin-left" style="float: right; background-color: #6bcef5 !important;">
+            <div class="button w3-margin-left" id = open style="float: right; background-color: #6bcef5 !important;">
               Switch </div>
         </div>
         <div class="card logo grey-bg">
@@ -81,6 +81,40 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div class="grey-bg" style="justify-content: center; display: flex;">
     <canvas class="w3-center canvas-stuff" id="myChart" style="width:100%; max-width:50%;"></div>
   </div>
+
+  <div class="modal-container" id="modal_container">
+    <div class = "modal">
+      <h1 id="headingTxt">Switch Now?</h1>
+
+      <p id="TitleTxt">Would you like to switch immediatly or at the end of your current subscription period?</p>
+      <button id ="switchNow" class = "close">
+        Switch Now
+      </button>
+   
+      <button id ="switchLater" class = "close">
+        Switch Later
+      </button>
+      
+    </div>
+  </div>
+
+  <div class="modal-container" id="modal_container_2">
+    <div class = "modal">
+      <h1 id="headingTxt">Subscription Switched!</h1>
+
+      <p id="TitleTxt">You have successfully switched to soundcloud saving £3.00 a month, we have generated new login details using your default settings:</p>
+      
+      <p id="UsernameTxt">Username: MoneyLover29</p> 
+      <p id="PasswordTxt">Password: Moneymoneymoney</p>
+
+      <button id ="close" class = "close">
+        close
+      </button>
+
+    </div>
+  </div>
+
+
   <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity">  
   <div class="w3-xlarge w3-padding-32">
@@ -146,5 +180,31 @@ function myFunction() {
       }
     });
 </script>
+
+<script>
+  const open = document.getElementById('open');
+  const modal_container = document.getElementById('modal_container');
+  const switchNow = document.getElementById('switchNow');
+  const close = document.getElementById('close');
+  const modal_container_2 = document.getElementById('modal_container_2');
+ 
+
+  open.addEventListener('click', () => {modal_container.classList.add('show');
+  });
+
+  close.addEventListener('click', () => {modal_container_2.classList.remove('show');
+  });
+
+  switchNow.addEventListener('click', () => {modal_container.classList.remove('show');
+  modal_container_2.classList.add('show');
+  
+
+  });
+
+  
+  
+</script>
+
+
 </body>
 </html>
